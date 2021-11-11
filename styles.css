@@ -106,6 +106,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	user-select: none;
 }
 
 body.theme1 {
@@ -238,12 +239,6 @@ body.theme3 {
 	margin-top: 0.4em;
 	margin-left: 0.4em;
 	transition: margin-left 0.4s;
-}
-
-.display-wrapper {
-	grid-area: disp;
-	background-color: var(--screen-bg);
-	border-radius: 1.5vh;
 }
 
 .controls {
@@ -392,6 +387,9 @@ body.theme3 {
 	padding-right: 0.6em;
 	padding-left: 0.6em;
 	min-width: 0;
+	grid-area: disp;
+	background-color: var(--screen-bg);
+	border-radius: 1.5vh;
 }
 
 .display {
@@ -402,6 +400,7 @@ body.theme3 {
 	justify-content: right;
 	min-width: 0;
 	overflow: hidden;
+	user-select: all;
 }
 
 @media(min-aspect-ratio: 0.75) {
