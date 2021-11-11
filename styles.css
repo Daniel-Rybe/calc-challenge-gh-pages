@@ -1,0 +1,417 @@
+* {
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+html {
+	/* theme 1 */
+	--desat-blue-400: hsl(222, 26%, 31%); /* main */
+	--desat-blue-600: hsl(223, 31%, 20%); /* toggle, keypad */
+	--desat-blue-900: hsl(224, 36%, 15%); /* screen */
+	--desat-blue-100: hsl(225, 21%, 49%); /* key */
+	--desat-blue-200: hsl(224, 28%, 35%); /* key shadow */
+	--red-100: hsl(6, 63%, 50%); /* key, toggle */
+	--red-500: hsl(6, 70%, 34%); /* key shadow */
+	--gray-100: hsl(30, 25%, 89%); /* key */
+	--gray-500: hsl(28, 16%, 65%); /* key shadow */
+	--dark-grayish-blue: hsl(221, 14%, 31%); /* numbers */
+	--white: hsl(0, 0%, 100%); /* text */
+
+ 	/* theme 2 */
+	--light-gray: hsl(0, 0%, 90%); /* main */
+	--grayish-red: hsl(0, 5%, 81%); /* toggle, keypad */
+	--very-light-gray: hsl(0, 0%, 93%); /* screen */
+	--dark-moderate-cyan: hsl(185, 42%, 37%); /* key */
+	--very-dark-cyan: hsl(185, 58%, 25%); /* key shadow */
+	--orange: hsl(25, 98%, 40%); /* key, toggle */
+	--dark-orange: hsl(25, 99%, 27%); /* key shadow */
+	--light-grayish-yellow: hsl(45, 7%, 89%); /* key */
+	--dark-grayish-orange: hsl(35, 11%, 61%); /* key shadow */
+	--very-dark-grayish-yellow: hsl(60, 10%, 19%); /* numbers */
+	/*--white: hsl(0, 0%, 100%); /* text */
+
+	/* theme 3 */
+	--dark-violet-900: hsl(268, 75%, 9%); /* main */
+	--dark-violet-800: hsl(268, 71%, 12%); /* toggle, keypad, screen */
+	--dark-violet-600: hsl(281, 89%, 26%); /* key */
+	--vivid-magenta: hsl(285, 91%, 52%); /* key shadow */
+	--pure-cyan: hsl(176, 100%, 44%); /* key, toggle */
+	--soft-cyan: hsl(177, 92%, 70%); /* key shadow */
+	--dark-violet-700: hsl(268, 47%, 21%); /* key */
+	--dark-magenta: hsl(290, 70%, 36%); /* key shadow */
+	--light-yellow: hsl(52, 100%, 62%); /* numbers */
+	--very-dark-blue: hsl(198, 20%, 13%); /* numbers */
+	/*--white: hsl(0, 0%, 100%); /* text */
+
+}
+
+html {
+	--main-bg-1: var(--desat-blue-400);
+	--toggle-bg-1: var(--desat-blue-600);
+	--keypad-bg-1: var(--desat-blue-600);
+	--screen-bg-1: var(--desat-blue-900);
+	--del-reset-key-bg-1: var(--desat-blue-100);
+	--del-reset-key-sh-1: var(--desat-blue-200);
+	--equals-key-bg-1: var(--red-100);
+	--equals-key-sh-1: var(--red-500);
+	--toggle-pin-1: var(--red-100);
+	--number-key-bg-1: var(--gray-100);
+	--number-key-sh-1: var(--gray-500);
+	--number-clr-1: var(--dark-grayish-blue);
+	--text-clr-1: var(--white);
+	--del-reset-clr-1: var(--white);
+	--equals-clr-1: var(--white);
+
+	--main-bg-2: var(--light-gray);
+	--toggle-bg-2: var(--grayish-red);
+	--keypad-bg-2: var(--grayish-red);
+	--screen-bg-2: var(--very-light-gray);
+	--del-reset-key-bg-2: var(--dark-moderate-cyan);
+	--del-reset-key-sh-2: var(--very-dark-cyan);
+	--equals-key-bg-2: var(--orange);
+	--equals-key-sh-2: var(--dark-orange);
+	--toggle-pin-2: var(--orange);
+	--number-key-bg-2: var(--light-grayish-yellow);
+	--number-key-sh-2: var(--dark-grayish-orange);
+	--number-clr-2: var(--very-dark-grayish-yellow);
+	--text-clr-2: var(--very-dark-grayish-yellow);
+	--del-reset-clr-2: var(--white);
+	--equals-clr-2: var(--white);
+
+	--main-bg-3: var(--dark-violet-900);
+	--toggle-bg-3: var(--dark-violet-800);
+	--keypad-bg-3: var(--dark-violet-800);
+	--screen-bg-3: var(--dark-violet-800);
+	--del-reset-key-bg-3: var(--dark-violet-600);
+	--del-reset-key-sh-3: var(--vivid-magenta);
+	--equals-key-bg-3: var(--pure-cyan);
+	--equals-key-sh-3: var(--soft-cyan);
+	--toggle-pin-3: var(--pure-cyan);
+	--number-key-bg-3: var(--dark-violet-700);
+	--number-key-sh-3: var(--dark-magenta);
+	--number-clr-3: var(--light-yellow);
+	--text-clr-3: var(--light-yellow);
+	--del-reset-clr-3: var(--white);
+	--equals-clr-3: var(--very-dark-blue);
+
+
+}
+
+body {
+	background-color: var(--main-bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+body.theme1 {
+	--main-bg: var(--main-bg-1);
+	--toggle-bg: var(--toggle-bg-1);
+	--keypad-bg: var(--keypad-bg-1);
+	--screen-bg: var(--screen-bg-1);
+	--del-reset-key-bg: var(--del-reset-key-bg-1);
+	--del-reset-key-sh: var(--del-reset-key-sh-1);
+	--equals-key-bg: var(--equals-key-bg-1);
+	--equals-key-sh: var(--equals-key-sh-1);
+	--toggle-pin: var(--toggle-pin-1);
+	--number-key-bg: var(--number-key-bg-1);
+	--number-key-sh: var(--number-key-sh-1);
+	--number-clr: var(--number-clr-1);
+	--text-clr: var(--text-clr-1);
+	--del-reset-clr: var(--del-reset-clr-1);
+	--equals-clr: var(--equals-clr-1);
+}
+
+body.theme2 {
+	--main-bg: var(--main-bg-2);
+	--toggle-bg: var(--toggle-bg-2);
+	--keypad-bg: var(--keypad-bg-2);
+	--screen-bg: var(--screen-bg-2);
+	--del-reset-key-bg: var(--del-reset-key-bg-2);
+	--del-reset-key-sh: var(--del-reset-key-sh-2);
+	--equals-key-bg: var(--equals-key-bg-2);
+	--equals-key-sh: var(--equals-key-sh-2);
+	--toggle-pin: var(--toggle-pin-2);
+	--number-key-bg: var(--number-key-bg-2);
+	--number-key-sh: var(--number-key-sh-2);
+	--number-clr: var(--number-clr-2);
+	--text-clr: var(--text-clr-2);
+	--del-reset-clr: var(--del-reset-clr-2);
+	--equals-clr: var(--equals-clr-2);
+}
+
+body.theme3 {
+	--main-bg: var(--main-bg-3);
+	--toggle-bg: var(--toggle-bg-3);
+	--keypad-bg: var(--keypad-bg-3);
+	--screen-bg: var(--screen-bg-3);
+	--del-reset-key-bg: var(--del-reset-key-bg-3);
+	--del-reset-key-sh: var(--del-reset-key-sh-3);
+	--equals-key-bg: var(--equals-key-bg-3);
+	--equals-key-sh: var(--equals-key-sh-3);
+	--toggle-pin: var(--toggle-pin-3);
+	--number-key-bg: var(--number-key-bg-3);
+	--number-key-sh: var(--number-key-sh-3);
+	--number-clr: var(--number-clr-3);
+	--text-clr: var(--text-clr-3);
+	--del-reset-clr: var(--del-reset-clr-3);
+	--equals-clr: var(--equals-clr-3);
+}
+
+.container {
+	width: calc(100% - 60px);
+	height: calc(100%);
+	display: grid;
+	grid-template-areas: 
+		"name theme"
+		"disp disp"
+		"cont cont";
+	grid-template-rows: 1fr 1fr 4fr;
+	grid-template-columns: 1fr 5em;
+	font-family: 'spartan', sans-serif;
+	font-size: 4vh;
+	color: var(--text-clr);
+}
+
+.name {
+	grid-area: name;
+	display: flex;
+	align-items: center;
+}
+
+.theme-wrapper {
+	grid-area: theme;
+	display: grid;
+	grid-template-areas: 
+		"empty theme-123"
+		"theme toggle";
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	font-size: 0.5em;
+	padding-block: calc(1.3em);
+}
+
+.theme-name {
+	grid-area: theme;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.theme-123 {
+	grid-area: theme-123;
+	display: flex;
+	align-items: end;
+	justify-content: center;
+}
+
+.theme-123 span {
+	letter-spacing: 0.6em;
+}
+
+.theme-123 span.last {
+	letter-spacing: 0em;
+}
+
+.theme-toggle-wrapper {
+	grid-area: toggle;
+	display: flex;
+	align-items: center;
+}
+
+.theme-toggle {
+	background-color: var(--toggle-bg);
+	width: 100%;
+	height: 2em;
+	border-radius: 1em;
+}
+
+.theme-toggle-pin {
+	height: 60%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: var(--toggle-pin);
+	margin-top: 0.4em;
+	margin-left: 0.4em;
+	transition: margin-left 0.4s;
+}
+
+.display-wrapper {
+	grid-area: disp;
+	background-color: var(--screen-bg);
+	border-radius: 1.5vh;
+}
+
+.controls {
+	grid-area: cont;
+	background-color: var(--keypad-bg);
+	border-radius: 1.4vh;
+	margin-top: 4vh;
+	margin-bottom: 7vh;
+	padding: 4vh;
+
+	display: grid;
+	grid-template-areas: 
+	"seven eight nine  del"
+	"four  five  six   plus"
+	"one   two   three minus"
+	"dot   zero  div   mult"
+	"res   res   eq    eq";
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2vh;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1vh;
+}
+
+.button-0,
+.button-1,
+.button-2,
+.button-3,
+.button-4,
+.button-5,
+.button-6,
+.button-7,
+.button-8,
+.button-9,
+.button-dot,
+.button-plus,
+.button-minus,
+.button-mult,
+.button-div {
+	color: var(--number-clr);
+	background-color: var(--number-key-bg);
+	box-shadow: 0px 0.7vh 0px 0px var(--number-key-sh);
+}
+
+.button-reset,
+.button-del {
+	font-size: 0.6em;
+	background-color: var(--del-reset-key-bg);
+	color: var(--del-reset-clr);
+	box-shadow: 0px 0.7vh 0px 0px var(--del-reset-key-sh);
+}
+
+.button-equals {
+	font-size: 0.6em;
+	background-color: var(--equals-key-bg);
+	color: var(--equals-clr);
+	box-shadow: 0px 0.7vh 0px 0px var(--equals-key-sh);
+}
+
+.button:hover {
+	filter: brightness(0.8);
+}
+
+.button:active {
+	filter: brightness(0.65);
+}
+
+.button-0 {
+	grid-area: zero;
+}
+
+.button-1 {
+	grid-area: one;
+}
+
+.button-2 {
+	grid-area: two;
+}
+
+.button-3 {
+	grid-area: three;
+}
+
+.button-4 {
+	grid-area: four;
+}
+
+.button-5 {
+	grid-area: five;
+}
+
+.button-6 {
+	grid-area: six;
+}
+
+.button-7 {
+	grid-area: seven;
+}
+
+.button-8 {
+	grid-area: eight;
+}
+
+.button-9 {
+	grid-area: nine;
+}
+
+.button-del {
+	grid-area: del;
+}
+
+.button-reset {
+	grid-area: res;
+}
+
+.button-equals {
+	grid-area: eq;
+}
+
+.button-plus {
+	grid-area: plus;
+}
+
+.button-minus {
+	grid-area: minus;
+}
+
+.button-mult {
+	grid-area: mult;
+}
+
+.button-dot {
+	grid-area: dot;
+}
+
+.display-wrapper {
+	font-size: 1.4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	min-width: 0;
+}
+
+.display {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	min-width: 0;
+	overflow: hidden;
+}
+
+@media(min-aspect-ratio: 0.75) {
+	.container {
+		height: 80vh;
+		width: 60vh;
+	}
+
+	.controls {
+		margin-bottom: 0px;
+		grid-gap: 3vh;
+	}
+}
